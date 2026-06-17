@@ -4,10 +4,10 @@ This is a project by group 5 and the objective is to recreate an existing websit
 The assignment is to recreate the official ST, Mary's College Kisubi website by using its outlook and design as an idea to create our own.
 - Course Unit; Fundamentals Of Computing
 - Group members;
-    - Lisa Namanya
-    - Duchess Wonder Kalibbala
     - Ssebirumbi Erick
-    - Munguleni Cynthia
+    - Duchess Wonder Kalibbala
     - Alinda Sasha
+    - Munguleni Cynthia
+    - Lisa Namanya
   
 
