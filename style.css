@@ -63,7 +63,7 @@
 }
 
 /* ===== ABOUT SECTION ===== */
-.library-about {
+.library-about{
   padding: 50px 80px;
   text-align: center;
   background-color: #e6c6e1;
@@ -82,6 +82,27 @@
   margin: 0 auto;
   line-height: 1.8;
 }
+
+/* --- PASTE THE NEW COLUMN CODE HERE --- */
+.column-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  margin-top: 30px;
+  align-items: flex-start;
+}
+
+.column {
+  flex: 1;
+}
+
+@media (max-width: 768px) {
+  .column-container {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+/*-------------------------------*/
 
 /* ===== PHOTO GRID SECTION (INSERT THIS AFTER ABOUT STYLES) ===== */
 .library-photos {
