@@ -1,3 +1,7 @@
+# SMACK Website about
+This particular section of the page tells us what the school is generally about.
+# Compiled by;
+Duchess Wonder Kalibbala
 # Group_5
 SMACK website Recreation 
 This is a project by group 5 and the objective is to recreate an existing website using only HTML and CSS.
