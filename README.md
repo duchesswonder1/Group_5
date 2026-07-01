@@ -1,8 +1,17 @@
-## Library Section
-This section of the website was created by **Lisa Namanya**.
+# SMACK Website about
+This particular section of the page tells us what the school is generally about.
+# Compiled by;
+Duchess Wonder Kalibbala
+# Group_5
+SMACK website Recreation 
+This is a project by group 5 and the objective is to recreate an existing website using only HTML and CSS.
+The assignment is to recreate the official ST, Mary's College Kisubi website by using its outlook and design as an idea to create our own.
+- Course Unit; Fundamentals Of Computing
+- Group members;
+    - Ssebirumbi Erick
+    - Duchess Wonder Kalibbala
+    - Alinda Sasha
+    - Munguleni Cynthia
+    - Lisa Namanya
+  
 
-### Description
-The Library page is a recreation of the St. Mary's College Kisubi (SMACK) library section. It was built using only HTML and CSS, maintaining the visual style and layout of the original website.
-The Library page serves as a digital representation of the school's library, providing students and visitors with information about the library's resources and services.
-It highlights the importance of the library as a center for academic excellence at St. Mary's College Kisubi, where students can access a wide range of books, journals and study materials.
-The page was carefully designed to reflect the professional and academic atmosphere of the SMACK library, using a clean and organized layout that makes it easy for users to navigate and find the information they need.
