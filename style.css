@@ -1,0 +1,184 @@
+/* ===== GENERAL RESET ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* ===== NAVBAR ===== */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  background-color: #f5f4f4;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.navbar .logo img {
+  height: 50px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: #050505;
+  border-bottom: 2px solid #050505;
+}
+
+/* ===== 👇 HERO SECTION (INSERT YOUR BANNER IMAGE NAME HERE) ===== */
+.library-hero {
+  background-image: url('https://smack.sc.ug/pluginfile.php/1/local_mb2builder/images/NYZ_6814.jpg'); /* 👈 Change this image name */
+  background-size: cover;
+  background-position: center;
+  height: 350px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+}
+
+.library-hero .hero-text h1 {
+  font-size: 48px;
+  text-shadow: 2px 2px 5px rgba(0,0,0,0.6);
+}
+
+.library-hero .hero-text p {
+  font-size: 20px;
+  margin-top: 10px;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+}
+
+/* ===== ABOUT SECTION ===== */
+.library-about {
+  padding: 50px 80px;
+  text-align: center;
+  background-color: #e6c6e1;
+}
+
+.library-about h2 {
+  font-size: 32px;
+  margin-bottom: 15px;
+  color: #cc0000;
+}
+
+.library-about p {
+  font-size: 16px;
+  color: #555;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.8;
+}
+
+/* ===== PHOTO GRID SECTION (INSERT THIS AFTER ABOUT STYLES) ===== */
+.library-photos {
+  padding: 50px 80px;
+  text-align: center;
+}
+
+.library-photos h2 {
+  font-size: 32px;
+  color: #cc0000;
+  margin-bottom: 20px;
+}
+
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 photos in a row */
+  gap: 15px;
+}
+
+.photo-grid img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover; /* Makes all images same neat size */
+  border-radius: 8px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+}
+/* ===== END OF PHOTO GRID STYLES ===== */
+
+/* ===== SERVICES SECTION ===== */
+.library-services {
+  padding: 50px 80px;
+  text-align: center;
+}
+
+.library-services h2 {
+  font-size: 32px;
+  margin-bottom: 30px;
+  color: #cc0000;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.service-card {
+  background-color: #e6c6e1;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 25px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.08);
+  transition: transform 0.3s;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+}
+
+.service-card h3 {
+  margin-bottom: 10px;
+  color: #333;
+}
+
+footer {
+    background-color: #0b2545;
+    color: white;
+    padding: 40px 50px 20px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+footer h4 {
+    margin-bottom: 12px;
+    text-transform: uppercase;
+    font-size: 15px;
+    letter-spacing: 1px;
+    color: #f2b134;
+}
+
+footer p {
+    font-size: 14px;
+    color: white;
+}
+
+.copyright {
+    text-align: center;
+    margin-top: 30px;
+    padding-top: 15px;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    font-size: 13px;
+    color: white;
+}
