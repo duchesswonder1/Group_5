@@ -1,6 +1,325 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>St. Mary's College Kisubi (SMACK)</title>
+<style>
+  body{
+    margin:0;
+    font-family:Arial, sans-serif;
+    color:#222;
+    line-height:1.6;
+  }
+  header{
+    background:#0B2A4A;
+    color:#fff;
+    padding:18px 20px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:wrap;
+    position:sticky;
+    top:0;
+    z-index:10;
+  }
+  header h1{
+    margin:0;
+    font-size:22px;
+  }
+  header span{
+    color:#C9A227;
+    font-size:13px;
+  }
+  nav a{
+    color:#fff;
+    text-decoration:none;
+    margin-left:18px;
+    font-size:15px;
+    padding-bottom:4px;
+    border-bottom:2px solid transparent;
+    cursor:pointer;
+  }
+  nav a:hover{
+    color:#C9A227;
+  }
+  nav a.active{
+    color:#C9A227;
+    border-bottom:2px solid #C9A227;
+  }
+
+  /* pages: only the active one shows */
+  .page{
+    display:none;
+  }
+  .page.active{
+    display:block;
+  }
+
+  section{
+    padding:40px 20px;
+    max-width:800px;
+    margin:0 auto;
+  }
+  section h2{
+    color:#0B2A4A;
+    border-bottom:3px solid #C9A227;
+    display:inline-block;
+    padding-bottom:4px;
+  }
+  .hero{
+    background:#0B2A4A;
+    color:#fff;
+    text-align:center;
+    padding:60px 20px;
+  }
+  .hero h2{
+    color:#fff;
+    border:none;
+    font-size:30px;
+  }
+  .hero p{
+    color:#ddd;
+  }
+  ul{
+    padding-left:20px;
+  }
+  .alt{
+    background:#F3EEE1;
+  }
+  footer{
+    background:#0B2A4A;
+    color:#ccc;
+    text-align:center;
+    padding:20px;
+    font-size:13px;
+  }
+
+  /* ---- tap-to-reveal boxes ---- */
+  .reveal-box{
+    background:#fff;
+    border:1px solid #ddd;
+    border-left:4px solid #C9A227;
+    padding:14px 16px;
+    margin-top:16px;
+    cursor:pointer;
+    user-select:none;
+  }
+  .alt .reveal-box{
+    background:#fffdf7;
+  }
+  .reveal-trigger{
+    margin:0;
+    font-weight:bold;
+    color:#0B2A4A;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+  }
+  .reveal-trigger .arrow{
+    transition:transform .2s ease;
+    color:#C9A227;
+  }
+  .reveal-box.open .reveal-trigger .arrow{
+    transform:rotate(90deg);
+  }
+  .reveal-content{
+    display:none;
+    margin-top:10px;
+    font-size:14.5px;
+    color:#444;
+  }
+  .reveal-box.open .reveal-content{
+    display:block;
+  }
+  .reveal-content iframe{
+    width:100%;
+    height:230px;
+    border:0;
+    margin-top:10px;
+  }
+  .hint{
+    font-size:12px;
+    color:#888;
+    margin-top:6px;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div>
+    <h1>St. Mary's College Kisubi</h1>
+    <span>SMACK &middot; Est. 1906 &middot; "Duc in Altum"</span>
+  </div>
+  <nav>
+    <a class="navlink active" data-page="home" onclick="showPage('home', this)">Home</a>
+    <a class="navlink" data-page="about" onclick="showPage('about', this)">About</a>
+    <a class="navlink" data-page="academics" onclick="showPage('academics', this)">Academics</a>
+    <a class="navlink" data-page="library" onclick="showPage('library', this)">Library</a>
+    <a class="navlink" data-page="clubs" onclick="showPage('clubs', this)">Clubs</a>
+  </nav>
+</header>
+
+<!-- ===================== HOME ===================== -->
+<section id="home" class="page hero active">
+  <h2>Welcome to SMACK</h2>
+  <p>An all-boys Catholic boarding school in Kisubi, Wakiso District, Uganda — forming young men since 1906.</p>
+  <p class="hint">Tap the box below 👇</p>
+  <div class="reveal-box" onclick="this.classList.toggle('open')" style="text-align:left;">
+    <p class="reveal-trigger">What does "Duc in Altum" mean? <span class="arrow">▸</span></p>
+    <div class="reveal-content">
+      <p style="color:#444;">"Duc in Altum" is Latin for "launch into the deep." It comes from the Gospel of Luke, where Jesus tells Peter to row into deep water and cast his nets. For SMACK, it means pushing past comfort and mediocrity to reach for the highest standard — in faith, studies, and character.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== ABOUT ===================== -->
+<section id="about" class="page">
+  <h2>About Us</h2>
+  <p>St. Mary's College Kisubi was founded in 1906 by Rev. Fr. Raux Modeste, a missionary of the White Fathers. The school later moved to its present site at Kisubi along the Kampala–Entebbe Road, where it has stood for over a century.</p>
+
+  <div class="reveal-box" onclick="this.classList.toggle('open')">
+    <p class="reveal-trigger">Tap to read our full history <span class="arrow">▸</span></p>
+    <div class="reveal-content">
+      <p>Known by the nickname "SMACK" and the motto <em>Duc in Altum</em>, the College is owned by the Archdiocese of Kampala and has produced generations of doctors, lawyers, clergy, and leaders across Uganda.</p>
+      <p><strong>1906</strong> — Founded by Fr. Raux Modeste.<br>
+      <strong>1918</strong> — SMACKOBA, the Old Boys' Association, is formed.<br>
+      <strong>1924</strong> — The College moves to its permanent site at Kisubi.<br>
+      <strong>2006</strong> — SMACK celebrates 100 years of "launching into the deep."</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== ACADEMICS ===================== -->
+<section id="academics" class="page alt">
+  <h2>Academics</h2>
+  <p>SMACK follows Uganda's national curriculum, preparing students for the Uganda Certificate of Education (UCE) at O-Level and the Uganda Advanced Certificate of Education (UACE) at A-Level.</p>
+  <p class="hint">Tap a subject area to see what's included 👇</p>
+
+  <div class="reveal-box" onclick="this.classList.toggle('open')">
+    <p class="reveal-trigger">Sciences <span class="arrow">▸</span></p>
+    <div class="reveal-content">
+      <ul><li>Mathematics</li><li>Physics</li><li>Chemistry</li><li>Biology</li><li>Computer Studies</li></ul>
+    </div>
+  </div>
+
+  <div class="reveal-box" onclick="this.classList.toggle('open')">
+    <p class="reveal-trigger">Humanities <span class="arrow">▸</span></p>
+    <div class="reveal-content">
+      <ul><li>History</li><li>Geography</li><li>Christian Religious Education</li><li>Economics</li></ul>
+    </div>
+  </div>
+
+  <div class="reveal-box" onclick="this.classList.toggle('open')">
+    <p class="reveal-trigger">Languages <span class="arrow">▸</span></p>
+    <div class="reveal-content">
+      <ul><li>English</li><li>Literature</li><li>Luganda</li><li>French</li></ul>
+    </div>
+  </div>
+
+  <div class="reveal-box" onclick="this.classList.toggle('open')">
+    <p class="reveal-trigger">Co-curricular <span class="arrow">▸</span></p>
+    <div class="reveal-content">
+      <ul><li>Football</li><li>Rugby</li><li>Athletics</li><li>Debate</li><li>Music</li></ul>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== LIBRARY ===================== -->
+<section id="library" class="page">
+  <h2>Library</h2>
+  <p>The College Library offers textbooks, reference materials, and past examination papers across all subjects, along with a quiet study hall for students preparing for exams.</p>
+
+  <div class="reveal-box" onclick="this.classList.toggle('open')">
+    <p class="reveal-trigger">Tap to see opening hours <span class="arrow">▸</span></p>
+    <div class="reveal-content">
+      <p>
+        Monday – Friday: 7:00 AM – 9:00 PM<br>
+        Saturday: 8:00 AM – 6:00 PM<br>
+        Sunday: 2:00 PM – 6:00 PM<br>
+        School Holidays: Closed
+      </p>
+      <p style="color:#888;font-size:12.5px;">Sample schedule — replace with the College's official hours.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== CLUBS ===================== -->
+<section id="clubs" class="page alt">
+  <h2>Clubs &amp; Societies</h2>
+  <p>Beyond the classroom, Smackists join clubs that build skills in leadership, communication, faith, and creativity.</p>
+  <p class="hint">Tap a club to learn more 👇</p>
+
+  <div class="reveal-box" onclick="this.classList.toggle('open')">
+    <p class="reveal-trigger">The Eagle Press Club <span class="arrow">▸</span></p>
+    <div class="reveal-content">
+      <p>Writers and editors behind <em>The Eagle</em>, the College's student publication — covering school news, sports, and student life.</p>
+    </div>
+  </div>
+
+  <div class="reveal-box" onclick="this.classList.toggle('open')">
+    <p class="reveal-trigger">Debate Club <span class="arrow">▸</span></p>
+    <div class="reveal-content">
+      <p>Students sharpen public speaking and critical thinking through weekly debates and inter-school competitions.</p>
+    </div>
+  </div>
+
+  <div class="reveal-box" onclick="this.classList.toggle('open')">
+    <p class="reveal-trigger">Science Club <span class="arrow">▸</span></p>
+    <div class="reveal-content">
+      <p>Hands-on experiments, science fairs, and projects for students who want to go further than the classroom syllabus.</p>
+    </div>
+  </div>
+
+  <div class="reveal-box" onclick="this.classList.toggle('open')">
+    <p class="reveal-trigger">Music &amp; Drama Club <span class="arrow">▸</span></p>
+    <div class="reveal-content">
+      <p>Choir, instrumental music, and stage drama — performing at school events, Mass, and inter-school festivals.</p>
+    </div>
+  </div>
+
+  <div class="reveal-box" onclick="this.classList.toggle('open')">
+    <p class="reveal-trigger">Chaplaincy &amp; Faith Club <span class="arrow">▸</span></p>
+    <div class="reveal-content">
+      <p>Prayer groups, choir for Mass, and faith formation activities that support the College's Catholic identity.</p>
+    </div>
+  </div>
+
+  <div class="reveal-box" onclick="this.classList.toggle('open')">
+    <p class="reveal-trigger">Wildlife &amp; Environment Club <span class="arrow">▸</span></p>
+    <div class="reveal-content">
+      <p>Tree planting, clean-up drives, and conservation education to build environmental responsibility on campus.</p>
+    </div>
+  </div>
+
+  <p style="color:#888;font-size:12.5px;margin-top:18px;">Sample club list — replace with the College's actual clubs and patrons.</p>
+</section>
+
+<footer>
+  &copy; <span id="yr"></span> St. Mjy4aary's College Kisubi — Unofficial demo site.
+</footer>
+
+<script>
+  document.getElementById('yr').textContent = new Date().getFullYear();
+
+  function showPage(id, link){
+    // hide all pages, show the chosen one
+    document.querySelectorAll('.page').forEach(function(p){
+      p.classList.remove('active');
+    });
+    document.getElementById(id).classList.add('active');
+
+    // update active nav link styling
+    document.querySelectorAll('.navlink').forEach(function(a){
+      a.classList.remove('active');
+    });
+    link.classList.add('active');
+
+    // scroll back to top of content, no page jump/hash change
+    window.scrollTo({top:0, behavior:'smooth'});
+  }
+</script>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>ST. MARY'S COLLEGE KISUBI - Home</title>
